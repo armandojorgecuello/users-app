@@ -12,5 +12,5 @@ final getUsersListProvider = StateNotifierProvider<GetUsersListUpdatenotifier,Re
 );
 
 final isLoadingInitialList = StateProvider<bool>((ref) 
-  => true
+  => false
 );

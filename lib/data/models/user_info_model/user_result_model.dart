@@ -14,6 +14,7 @@ class UserResultModel extends Equatable {
   final String? cell;
   final UserPictureModel? userPicture;
   final String? nat;
+  final UserDobModel? userDoBModel;
 
   const UserResultModel({
     this.gender, 
@@ -24,7 +25,8 @@ class UserResultModel extends Equatable {
     this.phone, 
     this.cell, 
     this.userPicture, 
-    this.nat
+    this.nat,
+    this.userDoBModel
   });
 
   factory UserResultModel.fromJson(Map<String, dynamic> json)
@@ -38,6 +40,7 @@ class UserResultModel extends Equatable {
       cell: json['cell'],
       userPicture: UserPictureModel.fromJson(json['picture']),
       nat: json['nat'],
+      userDoBModel: UserDobModel.fromJson(json['dob'])
     );
 
     UserResult toEntity()
@@ -51,6 +54,7 @@ class UserResultModel extends Equatable {
         cell: cell,
         userPicture: userPicture?.toEntity(),
         nat: nat,
+        userDoB: userDoBModel?.toEntity()
       );
       
       @override
@@ -64,6 +68,7 @@ class UserResultModel extends Equatable {
         cell,
         userPicture,
         nat,
+        userDoBModel,
       ];
 
 }

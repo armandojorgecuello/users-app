@@ -5,14 +5,14 @@ class ResultState<T,E> extends Equatable{
 
   final T? data;
   final E? error;
-  final bool? isLoading;
-  final bool? initial;
+  final bool isLoading;
+  final bool initial;
 
   const ResultState({
     this.data, 
     this.error, 
-    this.isLoading, 
-    this.initial
+    this.isLoading = false, 
+    this.initial = false,
   });
 
   factory ResultState.data(T data)=>ResultState(data:data);
