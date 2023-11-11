@@ -4,7 +4,7 @@ import 'package:users_app/domain/entities/entities.dart';
 
 class UserResult extends Equatable {
   
-  final String? genger;
+  final String? gender;
   final UserName? name;
   final UserLocation? userLocation;
   final String? email;
@@ -15,7 +15,7 @@ class UserResult extends Equatable {
   final String? nat;
 
   const UserResult({
-    this.genger, 
+    this.gender, 
     this.name, 
     this.userLocation, 
     this.email, 
@@ -28,7 +28,7 @@ class UserResult extends Equatable {
 
   @override
   List<Object?> get props => [
-    genger,
+    gender,
     name,
     userLocation,
     email,

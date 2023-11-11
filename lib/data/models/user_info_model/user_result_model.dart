@@ -5,7 +5,7 @@ import 'package:users_app/domain/entities/entities.dart';
 
 class UserResultModel extends Equatable {
   
-  final String? genger;
+  final String? gender;
   final UserNameModel? name;
   final UserLocationModel? userLocation;
   final String? email;
@@ -16,7 +16,7 @@ class UserResultModel extends Equatable {
   final String? nat;
 
   const UserResultModel({
-    this.genger, 
+    this.gender, 
     this.name, 
     this.userLocation, 
     this.email, 
@@ -29,20 +29,20 @@ class UserResultModel extends Equatable {
 
   factory UserResultModel.fromJson(Map<String, dynamic> json)
     =>UserResultModel(
-      genger: json['genger'],
-      name: json['name'],
-      userLocation: json['location'],
+      gender: json['gender'],
+      name: UserNameModel.fromJson(json['name']),
+      userLocation: UserLocationModel.fromJson(json['location']),
       email: json['email'],
-      userLogin: json['login'],
+      userLogin: UserLoginModel.fromJson(json['login']),
       phone: json['phone'],
       cell: json['cell'],
-      userPicture: json['picture'],
+      userPicture: UserPictureModel.fromJson(json['picture']),
       nat: json['nat'],
     );
 
     UserResult toEntity()
       =>UserResult(
-        genger: genger,
+        gender: gender,
         name: name?.toEntity(),
         userLocation: userLocation?.toEntity(),
         email: email,
@@ -55,7 +55,7 @@ class UserResultModel extends Equatable {
       
       @override
       List<Object?> get props => [
-        genger,
+        gender,
         name,
         userLocation,
         email,

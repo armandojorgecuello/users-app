@@ -7,3 +7,4 @@ export 'user_info/user_name.dart';
 export 'user_info/user_picture.dart';
 export 'user_info/user_result.dart';
 export 'user_info/user_street.dart';
+export 'result_state.dart';
