@@ -15,7 +15,7 @@ class UsersDataSource{
     const path = '/api';
     final queryParameter ={
       'page': page,
-      'result': '10',
+      'results': '10',
       'seed': 'abc'
     };
     

@@ -22,12 +22,12 @@ class UserLocationModel extends Equatable{
 
   factory UserLocationModel.fromJson(Map<String, dynamic>json)
     =>UserLocationModel(
-      street:json['street'],
+      street: UserStreetModel.fromJson(json['street']),
       city:json['city'],
       state:json['state'],
       country:json['country'],
-      postalCode:json['postalCode'],
-      coordinates:json['coordinates'],
+      postalCode:json['postcode'].toString(),
+      coordinates: UserCoordinatesModel.fromJson(json['coordinates']),
     );
 
   UserLocation toEntity()

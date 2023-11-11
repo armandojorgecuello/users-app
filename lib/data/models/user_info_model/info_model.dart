@@ -15,7 +15,7 @@ class InfoModel extends Equatable {
   factory InfoModel.fromJson(Map<String, dynamic>json)
     =>InfoModel(
       seed: json['seed'],
-      result: json['reuslt'],
+      result: json['results'],
       page: json['page'],
     );
 

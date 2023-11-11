@@ -12,8 +12,8 @@ class UserCoordinatesModel extends Equatable{
 
   factory UserCoordinatesModel.fromJson(Map<String, dynamic>json)
     =>UserCoordinatesModel(
-      latitude: json['latitude'],
-      longitude: json['longitude']
+      latitude: double.parse(json['latitude'] ?? '0'),
+      longitude: double.parse(json['longitude'] ?? '0')
     );
 
   UserCoordinates toEntity()
