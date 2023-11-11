@@ -1,1 +1,10 @@
 export 'result_model.dart';
+export 'user_info_model/info_model.dart';
+export 'user_info_model/user_coordinates_model.dart';
+export 'user_info_model/user_list_info_model.dart';
+export 'user_info_model/user_location_model.dart';
+export 'user_info_model/user_login_model.dart';
+export 'user_info_model/user_name_model.dart';
+export 'user_info_model/user_picture_model.dart';
+export 'user_info_model/user_result_model.dart';
+export 'user_info_model/user_street_model.dart';

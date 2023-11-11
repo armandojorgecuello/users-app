@@ -6,11 +6,11 @@ enum Method{
   get,
 }
 
-class ApiUtls{
+class ApiUtils{
   final Dio _client;
   final String _host;
 
-  ApiUtls({
+  ApiUtils({
     required Dio client, 
     required String host
   }) : _client = client, _host = host;
