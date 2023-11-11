@@ -20,17 +20,4 @@ class GetUsersListUpdatenotifier extends StateNotifier<ResultState<UsersListInfo
       success: ResultState.data
     );
   }
-
-  void updateList(UsersListInfo userInfo){
-    if(state.data != null){
-      List<UserResult>? usersList = state.data!.result! + userInfo.result!;
-      state = state.copyWith(
-        data: state.data!.copyWith(
-          result: usersList,
-          info: userInfo.info
-        )
-      );
-    }
-  }
-
 }

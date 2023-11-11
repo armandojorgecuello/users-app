@@ -36,24 +36,6 @@ class UserDetailsScreen extends ConsumerWidget {
               borderRadius: BorderRadius.circular(10)
             ),
             flexibleSpace: FlexibleSpaceBar(
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  CustomText(
-                    text: '${userResult.name!.title}. ${userResult.name!.first} ${userResult.name!.last}' , 
-                    fontSize: 20, 
-                    fontWeight: FontWeight.bold, 
-                    color: Colors.white
-                  ),
-                  CustomText(
-                    text: userResult.gender!.capitalize() , 
-                    fontSize: 20, 
-                    fontWeight: FontWeight.bold, 
-                    color: Colors.white
-                  ),
-                ],
-              ),
               background: CachedNetworkImage(
                 imageUrl: userResult.userPicture!.large!,
                 imageBuilder: (context, imageProvider) => Container(
@@ -87,6 +69,16 @@ class UserDetailsScreen extends ConsumerWidget {
                     fontWeight: FontWeight.w400, 
                     color: Colors.black,
                     textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 15,),
+                  CustomRichText(
+                    title: 'Name', 
+                    subTitle: '${userResult.name!.title}. ${userResult.name!.first} ${userResult.name!.last}'
+                  ),
+                  const SizedBox(height: 15,),
+                  CustomRichText(
+                    title: 'Genre', 
+                    subTitle: userResult.gender!.capitalize()
                   ),
                   const SizedBox(height: 15,),
                   CustomRichText(
