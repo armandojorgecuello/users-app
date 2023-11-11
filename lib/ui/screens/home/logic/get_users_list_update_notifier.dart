@@ -20,5 +20,4 @@ class GetUsersListUpdatenotifier extends StateNotifier<ResultState<UsersListInfo
       success: ResultState.data
     );
   }
-
 }

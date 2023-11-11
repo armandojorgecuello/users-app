@@ -11,7 +11,16 @@ class UsersListInfo extends Equatable{
     this.info
   }); 
 
- 
+    UsersListInfo copyWith({
+      List<UserResult>? result,
+      Info? info,
+    }){
+      return UsersListInfo(
+        result: result ?? this.result,
+        info: info ?? this.info
+      );
+    }
+
     @override
     List<Object?> get props => [
       result,

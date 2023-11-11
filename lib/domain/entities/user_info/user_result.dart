@@ -13,6 +13,7 @@ class UserResult extends Equatable {
   final String? cell;
   final UserPicture? userPicture;
   final String? nat;
+  final UserDob? userDoB;
 
   const UserResult({
     this.gender, 
@@ -23,7 +24,8 @@ class UserResult extends Equatable {
     this.phone, 
     this.cell, 
     this.userPicture, 
-    this.nat
+    this.nat,
+    this.userDoB
   });
 
   @override
@@ -37,6 +39,7 @@ class UserResult extends Equatable {
     cell,
     userPicture,
     nat,
+    userDoB,
   ];
 
 }
